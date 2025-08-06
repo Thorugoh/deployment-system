@@ -9,4 +9,5 @@ Steps
 
 Commands:
 Creating cluster: kind create cluster --config kind-config.yaml
+Create namespaces: kubectl apply -f namespaces.yaml
 
