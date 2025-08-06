@@ -6,3 +6,7 @@ Steps
 - Use Opentofu to manage helm releases for infra tools
 - Add Jekins to run pipelines for app code
 - Prometheus + Grafana auto-integrated with apps
+
+Commands:
+Creating cluster: kind create cluster --config kind-config.yaml
+
