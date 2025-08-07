@@ -1,0 +1,28 @@
+controller:
+  admin:
+    username: admin
+    password: admin
+  serviceType:  NodePort
+  nodePort: 30688
+  sidecars:
+    configAutoReload:
+      enabled: false
+  
+  JCasC:
+    configScripts:
+      welcome-message: |
+        jenkins:
+          systemMessage: "Welcome to Jenkins in Kubernetes"
+
+persistence:
+  enabled: true
+  size: 8Gi
+  storageClass: ""
+
+resources:
+  requests:
+    cpu: "500m"
+    memory: "512Mi"
+  limits:
+    cpu: "1000m"
+    memory: "1024Mi"

@@ -3,4 +3,8 @@ apiVersion: kind.x-k8s.io/v1alpha4
 name: dev-cluster
 nodes:
   - role: control-plane
+    extraPortMappings:
+      - containerPort: 30688
+        hostPort: 30688
+        protocol: TCP
   - role: worker
