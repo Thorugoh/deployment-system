@@ -1,13 +1,18 @@
 controller:
+  installPlugins: false
+  jnlp:
+    repository: "thorugoh/jenkins-agent"
+    tag: "latest"
+    pullPolicy: Always
   admin:
     username: admin
     password: admin
-  serviceType:  NodePort
+  serviceType: NodePort
   nodePort: 30688
   sidecars:
     configAutoReload:
       enabled: false
-  
+
   JCasC:
     configScripts:
       welcome-message: |
