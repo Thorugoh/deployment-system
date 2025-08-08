@@ -21,3 +21,6 @@ helm install jenkins jenkins/jenkins -n infra -f values.yaml
 export NODE_PORT=$(kubectl get --namespace infra -o jsonpath="{.spec.ports[0].nodePort}" services jenkins)
 export NODE_IP=$(kubectl get nodes --namespace infra -o jsonpath="{.items[0].status.addresses[0].address}")
 echo http://$NODE_IP:$NODE_PORT
+
+- Get Pods by namespace
+kubectl get pods -n infra
